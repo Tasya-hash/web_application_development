@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <br>
+    </head>
+    <body>
+        <div>
+            <p style="color: gray; font-size:xx-large; text-indent: 400px; font-family: Arial, sans-serif;" >ПУТЕШЕСТВИЯ</p>
+            <p style="color: gray; font-size:large; text-indent: 400px; font-family: Arial, sans-serif;">навигация по блокам с якорями</p>
+            <nav style=" text-indent: 400px">
+                <a href="#1">Карта регионов</a>
+                <a href="#2">Описание</a>
+                <a href="#3">Погода</a>
+                <a href="#4">О нас/ о стране</a>
+                <a href="#5">Форма обратной связи/Задать вопрос</a>
+                <a href="#6">FAQ</a>
+                <a href="#7">Контакты</a>
+            </nav>
+            <br>
+            <style>
+                table{
+                    border-collapse: collapse;
+                    margin: 0 auto;
+                }
+            </style>
+            <table border="1" width="40%" cellpadding="20%" style="border-collapse: collapse; ">
+                <tr>
+                    <td style="color: gray; font-size:large; text-align: left; font-family: Arial, sans-serif;">
+                        
+                        <h3 style="font-weight: normal;">НАЗВАНИЕ СТРАНЫ</h3>
+                        <p>блок &lt;header&gt; </p>
+                        <p>стили для заголовков h1, h2, h3</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: gray; font-size:large; text-align: left; font-family: Arial, sans-serif;">
+                        <h3 style="font-weight: normal;" id="1">Карта регионов</h3>
+                        <p>Кликабельное svg-изображение с возможностью выбора</p>
+                        <p>+ анимация + мобилка</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: gray; font-size:large; text-align: left; font-family: Arial, sans-serif;"> 
+                        <h3 style="font-weight: normal;" id="2">Описание</h3> 
+                        <p>Красиво оформленный текст</p> 
+                        <p>стили для блоко с текстом</p> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: gray; font-size:large; text-align: left; font-family: Arial, sans-serif;">
+                        <h3 style="font-weight: normal;" id="3">Погода</h3>
+                        <p>желательно на карте, либо прогноз по регионам/городам</p>
+                        <p>блок с min-height</p> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: gray; font-size:large; text-align: left; font-family: Arial, sans-serif;"> 
+                        <h3 style="font-weight: normal;" id="4">О нас/ о стране</h3> 
+                        <p>блок с цифрами, тезисно</p> 
+                        <p>стили с display:flex</p> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: gray; font-size:large; text-align: left; font-family: Arial, sans-serif;"> 
+                        <h3 style="font-weight: normal;" id="5">Форма обратной связи/Задать вопрос</h3> 
+                        <p>форма для ввода и отправки текста</p> 
+                        <p>стили элементов управления</p> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: gray; font-size:large; text-align: left; font-family: Arial, sans-serif;"> 
+                        <h3 style="font-weight: normal;" id="6">FAQ</h3> 
+                        <p>раскрывающие поля</p> 
+                        <p>обработка раскрывашек</p> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: gray; font-size:large; text-align: left; font-family: Arial, sans-serif;"> 
+                        <h3 style="font-weight: normal;" id="7">Контакты</h3> 
+                        <p>блок &lt;footer&gt;</footer></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
