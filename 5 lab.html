@@ -1,0 +1,235 @@
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <title>Лабоарторная 5</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+                line-height: 1.5;
+                scroll-behavior: smooth;
+            }
+            .navbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background: rgba(15, 25, 35, 0.92);
+                backdrop-filter: blur(8px);
+                z-index: 1000;
+                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+            }
+            .nav-menu {
+                display: flex;
+                justify-content: center;
+                gap: 2.5rem;
+                padding: 1rem 1rem;
+                list-style: none;
+                flex-wrap: wrap;
+            }
+            .nav-menu a {
+                color: white;
+                text-decoration: none;
+                font-weight: 600;
+                padding: 0.4rem 0.8rem;
+                border-radius: 40px;
+                transition: all 0.25s ease;
+                background: transparent;
+            }
+            .nav-menu a:hover {
+                background: #ff8c42;
+                color: #1e2a36;
+                transform: scale(1.05);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            }
+            section{
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 5rem 2rem;
+                scroll-margin-top: 70px;
+            }
+            .container {
+                max-width: 1200px;
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            .block-hero {
+                background: linear-gradient(135deg, #f5f7fa 0%, #e9edf2 100%);
+            }
+            .hero-content h1 {
+                font-size: 3.2rem;
+                margin-bottom: 1rem;
+                color: #1f2a3e;
+            }
+            .hero-content p {
+                font-size: 1.3rem;
+                color: #2c3e50;
+                max-width: 700px;
+                margin: 0 auto;
+            }
+            .block-bg {
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                            url('G:/lab 2_2/background.jpeg');
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                color: white;
+            }
+            .block-bg .container {
+                background: rgba(0, 0, 0, 0.4);
+                padding: 2rem;
+                border-radius: 48px;
+                backdrop-filter: blur(2px);
+            }
+            .block-bg h2, .block-bg p {
+                color: white;
+            }
+            .card {
+                background: white;
+                border-radius: 28px;
+                padding: 1.8rem;
+                width: 260px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+                transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+                cursor: pointer;
+            }
+            .card:hover {
+                transform: translateY(-12px);
+                box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+                background: #fffaf2;
+            }
+            .card-img {
+                width: 100%;
+                height: 160px;
+                object-fit: cover;
+                border-radius: 20px;
+                transition: transform 0.3s ease;
+            }
+            .card:hover .card-img {
+                transform: scale(1.03);
+            }
+            .card h3 {
+                margin: 1rem 0 0.5rem;
+                color: #1e4660;
+            }
+            .card p {
+                color: #4a5568;
+                font-size: 0.9rem;
+            }
+            .btn-primary {
+                background: #ff7b2c;
+                border: none;
+                color: white;
+                font-size: 1.2rem;
+                font-weight: bold;
+                padding: 0.9rem 2rem;
+                border-radius: 60px;
+                cursor: pointer;
+                transition: all 0.25s ease;
+                margin-top: 1.5rem;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            .btn-primary:active {
+                transform: translateY(2px);
+            }
+            footer {
+                background: #0f1922;
+                color: #a0b3c9;
+                text-align: center;
+                padding: 2rem;
+                font-size: 0.85rem;
+            }
+            @media (max-width: 700px) {
+                .hero-content h1 {font-size: 2.3rem;}
+                .nav-menu {gap: 1rem;}
+                section {padding: 4rem 1rem;}
+                .card {width: 220px;}
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#background-block">Фон-блок</a></li>
+                <li><a href="#cards">Карточки</a></li>
+                <li><a href="#action">Анимация</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="home" class="block-hero">
+                <div class="container hero-content">
+                    <h1>Главная</h1>
+                    <p>Обалденное описание всего и вся</p>
+                    <button class="btn-primary" onclick="alert('Анимация с кнопками работает!!!')">Нажми на меня</button>
+                </div>
+            </section>
+            
+            <section id="background-block" class="block-bg">
+                <div class="container">
+                    <h2>Блок с фоновым изображением</h2>
+                    <p style="font-size: 1.2rem; max-width: 700px; margin: 1rem auto;">
+                        Здесь используется CSS-свойство background-image.
+                    </p>
+                </div>
+            </section>
+
+            <section id="cards">
+                <div class="container">
+                    <h2>Карточки</h2>
+                    <p style="margin-bottom: 1.5rem;">Навести курсор для анимации</p>
+                    <div class="card">
+                        <img class="card-img" scr="G:/lab 2_2/photo1.jpg" alt="Природа" loading="lazy">
+                        <h3>Картинка 1</h3>
+                        <p>Появляется карточка</p>
+                    </div>
+                    <div class="card">
+                        <img class="card-img" scr="G:/lab 2_2/photo2.jpg" alt="Природа" loading="lazy">
+                        <h3>Картинка 2</h3>
+                        <p>Появляется карточка</p>
+                    </div>
+                    <div class="card">
+                        <img class="card-img" scr="G:/lab 2_2/photo3.jpg" alt="Природа" loading="lazy">
+                        <h3>Картинка 3</h3>
+                        <p>Появляется карточка</p>
+                    </div>
+                </div>
+                <button class="btn-primary" id="demoBtn" style="margin-top: 2rem;">Кнопка с анимацией</button>
+            </div>
+            </section>
+            <section id="action" style="background: #d9e2ec;">
+                <div class="container">
+                    <h2>Анимация элементов</h2>
+                    <p>Все анимированно</p>
+                    <button class="btn-primary" onclick="alert('Анимация выполнена!')">Попробуй навести</button>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Все выполнено!!!</p>
+        </footer>
+        <script>
+            document.querySelectorAll('.nav-menu a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const hash = this.getAttribute('href');
+                    if (hash && hash !== '#') {
+                        const target = document.querySelector(hash);
+                        if (target) {
+                            e.preventDefault();
+                            target.scrollIntoView({behavior: 'smooth', block: 'start'});
+                        }
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
